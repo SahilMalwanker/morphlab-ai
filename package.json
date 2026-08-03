@@ -1,0 +1,44 @@
+{
+  "name": "morphlab",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Browser-native robotics learning playground",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "vite",
+    "proxy": "node server/main.ts",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "serve:dist": "node scripts/serve-static.mjs dist 4174 /morphlab/",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.server.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "spikes": "vitest run --config vitest.spikes.config.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@mujoco/mujoco": "3.14.0",
+    "fastify": "5.12.5",
+    "idb": "8.0.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "0.186.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.19.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "fake-indexeddb": "6.2.5",
+    "typescript": "7.0.2",
+    "vite": "8.3.2",
+    "vitest": "5.0.3"
+  }
+}
