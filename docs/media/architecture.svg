@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="t d">
+<title id="t">MorphLab architecture</title><desc id="d">React and Three.js sit above a framework-free TypeScript core of kinematics, physics, skills, learning, navigation, language, AI tools and persistence. Web Workers run batch jobs with their own MuJoCo instance. A local proxy is the only reader of the API key.</desc>
+<defs><style>
+.h{font:700 17px 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#f2f5f3} .s{font:400 13px 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#9caaa6} .cap{font:600 13px 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#9caaa6;letter-spacing:1.5px} .m{font:400 12px ui-monospace, 'Cascadia Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;fill:#9caaa6}
+.flow{fill:none;stroke:#9bd6c3;stroke-width:2;stroke-opacity:.7;stroke-dasharray:5 7;animation:dash 1s linear infinite}
+.flow2{fill:none;stroke:#e5c58b;stroke-width:2;stroke-opacity:.7;stroke-dasharray:5 7;animation:dash 1.4s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-24}}
+.pulse{animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style></defs>
+<rect width="1200" height="640" rx="16" fill="#111415"/>
+<rect x="30" y="30" width="860" height="580" rx="14" fill="none" stroke="#637275" stroke-dasharray="2 6"/>
+<text class="cap" x="50" y="58">BROWSER  ·  WORKS OFFLINE</text>
+<rect x="60" y="76" width="390" height="74" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="255.0" y="110.0" text-anchor="middle">src/ui  ·  React 19</text><text class="s" x="255.0" y="130.0" text-anchor="middle">six workspaces, sessions, command bar</text>
+<rect x="470" y="76" width="390" height="74" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="665.0" y="110.0" text-anchor="middle">src/render  ·  Three.js</text><text class="s" x="665.0" y="130.0" text-anchor="middle">imperative viewports, Z-up, overlays</text>
+<line x1="60" y1="176" x2="860" y2="176" stroke="#637275" stroke-dasharray="8 6"/>
+<text class="m" x="460" y="170" text-anchor="middle">no React or Three.js below this line</text>
+<rect x="60" y="196" width="190" height="76" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="155.0" y="231.0" text-anchor="middle">src/core</text><text class="s" x="155.0" y="251.0" text-anchor="middle">math, model, FK/IK, PD</text>
+<rect x="262" y="196" width="190" height="76" rx="10" fill="#1b2021" stroke="#9bd6c3" stroke-width="1.5" /><text class="h" x="357.0" y="231.0" text-anchor="middle">src/physics</text><text class="s" x="357.0" y="251.0" text-anchor="middle">MJCF + MuJoCo WASM</text>
+<rect x="464" y="196" width="190" height="76" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="559.0" y="231.0" text-anchor="middle">src/skills</text><text class="s" x="559.0" y="251.0" text-anchor="middle">evaluation, gaits</text>
+<rect x="666" y="196" width="190" height="76" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="761.0" y="231.0" text-anchor="middle">src/learning</text><text class="s" x="761.0" y="251.0" text-anchor="middle">MLP, ES, ARS</text>
+<rect x="60" y="288" width="190" height="76" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="155.0" y="323.0" text-anchor="middle">src/nav</text><text class="s" x="155.0" y="343.0" text-anchor="middle">grid, A*, odometry</text>
+<rect x="262" y="288" width="190" height="76" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="357.0" y="323.0" text-anchor="middle">src/language</text><text class="s" x="357.0" y="343.0" text-anchor="middle">rule parser</text>
+<rect x="464" y="288" width="190" height="76" rx="10" fill="#1b2021" stroke="#9bd6c3" stroke-width="1.5" /><text class="h" x="559.0" y="323.0" text-anchor="middle">src/ai</text><text class="s" x="559.0" y="343.0" text-anchor="middle">tools, task manager</text>
+<rect x="666" y="288" width="190" height="76" rx="10" fill="#1b2021" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="761.0" y="323.0" text-anchor="middle">src/persistence</text><text class="s" x="761.0" y="343.0" text-anchor="middle">IndexedDB, bundles</text>
+<rect x="60" y="400" width="800" height="70" rx="10" fill="#242b2d" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="460.0" y="432.0" text-anchor="middle">Web Workers</text><text class="s" x="460.0" y="452.0" text-anchor="middle">randomized 20-trial evaluations, training, rollouts, map batches; each with its own MuJoCo instance</text>
+<rect x="60" y="500" width="800" height="80" rx="10" fill="#16201e" stroke="#9bd6c3" stroke-width="1.5" class="pulse"/><text class="h" x="460.0" y="537.0" text-anchor="middle">MuJoCo 3.14 (WebAssembly)</text><text class="s" x="460.0" y="557.0" text-anchor="middle">contacts, gravity, motors with effort limits; controllers at 500 Hz see encoders, IMU and touch only</text>
+<path class="flow" d="M255 150 L255 196"/><path class="flow" d="M665 150 L665 196"/>
+<path class="flow" d="M460 364 L460 400"/><path class="flow" d="M460 470 L460 500"/>
+<rect x="920" y="30" width="250" height="580" rx="14" fill="none" stroke="#637275" stroke-dasharray="2 6"/>
+<text class="cap" x="940" y="58">OPTIONAL  ·  LOCAL</text>
+<rect x="940" y="196" width="210" height="110" rx="10" fill="#1b2021" stroke="#e5c58b" stroke-width="1.5" /><text class="h" x="1045.0" y="248.0" text-anchor="middle">AI proxy</text><text class="s" x="1045.0" y="268.0" text-anchor="middle">Node.js or PowerShell</text>
+<text class="m" x="1045" y="290" text-anchor="middle">only reader of .env</text>
+<rect x="940" y="400" width="210" height="90" rx="10" fill="#242b2d" stroke="#3a4548" stroke-width="1.5" /><text class="h" x="1045.0" y="442.0" text-anchor="middle">Language model</text><text class="s" x="1045.0" y="462.0" text-anchor="middle">chat completions</text>
+<path class="flow2" d="M858 234 C 900 234, 900 250, 940 250"/>
+<text class="m" x="898" y="226" text-anchor="middle">/api/ai</text>
+<path class="flow2" d="M1045 306 L1045 400"/>
+<text class="m" x="1045" y="540" text-anchor="middle">no images are sent</text>
+<text class="m" x="1045" y="560" text-anchor="middle">tool names allowlisted</text>
+<text class="m" x="1045" y="580" text-anchor="middle">rate limited, loopback only</text>
+</svg>
