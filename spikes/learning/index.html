@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spike S4 - in-browser policy training</title>
+    <style>
+      body { margin: 24px; background: #0d1117; color: #e6edf3; font: 13px/1.5 system-ui, sans-serif; }
+      button { background: #21262d; color: #e6edf3; border: 1px solid #30363d; padding: 5px 12px; margin-right: 8px; cursor: pointer; }
+      button:disabled { opacity: 0.5; cursor: default; }
+      pre { background: #161b22; border: 1px solid #30363d; padding: 10px; font: 12px ui-monospace, monospace; }
+      .label { color: #8b949e; }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 16px">Spike S4: train, save, reload and evaluate a reaching policy</h1>
+    <p class="label">Kinematic two-link arm. Imitation learning from a damped least-squares expert, trained in a Web Worker. Evaluation: 100 held-out targets, success when the final error is below 2 cm.</p>
+    <button id="train">Train imitation policy</button><button id="clear">Delete saved policy</button>
+    <pre id="out">Checking for a saved policy...</pre>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spike S1 - MuJoCo quadruped stance</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0d1117; color: #e6edf3; font: 13px/1.4 system-ui, sans-serif; }
+      #view { position: absolute; inset: 0; }
+      #panel { position: absolute; top: 12px; left: 12px; background: #161b22e6; border: 1px solid #30363d; padding: 10px 12px; min-width: 280px; }
+      #panel h1 { font-size: 14px; margin: 0 0 6px; }
+      #panel .label { color: #8b949e; }
+      button { background: #21262d; color: #e6edf3; border: 1px solid #30363d; padding: 4px 10px; margin-right: 6px; cursor: pointer; }
+      pre { margin: 6px 0 0; font: 12px ui-monospace, monospace; }
+    </style>
+  </head>
+  <body>
+    <div id="view"></div>
+    <div id="panel">
+      <h1>Spike S1: quadruped PD stance</h1>
+      <div class="label">Physics: MuJoCo WASM. Rendering simulator state (ground truth).</div>
+      <div style="margin-top: 6px"><button id="push">Push 2 N*s</button><button id="reset">Reset</button></div>
+      <pre id="stats">Loading MuJoCo...</pre>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
